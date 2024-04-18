@@ -1,0 +1,37 @@
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    background-color: white;
+    color: black;
+    width: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 10px 15px 10px;
+}
+
+body{
+    background: linear-gradient(90deg in oklab, #08609E, #1D9BDD, #2AAAB8, #2AAAB8, #1D9BDD, #08609E);
+    
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: #08609E;
+    text-align: center;
+    text-shadow: 1px 1px 1px;
+}
+
+h2{
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2AAAB8;
+}
+
+p{
+    text-align: justify;
+}
