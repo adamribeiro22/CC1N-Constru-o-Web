@@ -1,0 +1,99 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 17</title>
+<style>
+    *{
+        margin: 0;
+    }
+    .formulario{
+        width: 400px;
+        padding: 30px;
+        border: 1px solid #534747;
+    }
+    .formulario span{
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .field{
+        width: 100%;
+        margin: 15px 0;
+    }
+    .field span{
+        padding-left: 10px;
+        font-size: 1.1em;
+        display: block;
+        width: 100%;
+    }
+    div{
+        display: flex;
+        justify-content: center;
+    }
+    section{
+       
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        
+    }
+</style>
+
+</head>
+<body>
+<div><h1>Formulário de contato</h1></div>
+
+<section>
+<div class="field">
+    <span>Nome:</span>
+    <input type="text" name="nome" required placeholder="nome">
+</div> <br>
+    <div class="field">
+    <span>E-mail:</span>
+    <input type="email"> <br>
+    
+    <span>Data de nascimento:</span>
+    <input type="date"> <br>
+    
+    <span>Visita ao site:</span>
+    <input type="datetime-local"> <br>
+    
+    <span>Senha:</span>
+    <input type="password"> <br>
+    
+    <span>Contato:</span>
+    <input type="radio" name="contato" id="sim" value="Sim"> Sim
+    <input type="radio" name="contato" id="nao" value="Nao"> Não <br>
+
+    <span>Assunto:</span>
+    <input type="checkbox" name="auto" id="auto"> Automóvel
+    <input type="checkbox" name="negocio" id="auto"> Negócios
+    <input type="checkbox" name="auto" id="financa"> Finança
+    <input type="checkbox" name="auto" id="tecnologia"> tecnologia
+    <input type="checkbox" name="auto" id="esporte"> Esporte <br>
+
+    <span>Local: </span>
+    <select name="local" id="local" size="1">
+        <option value="">Selecione</option>
+        <optgroup label="Grande Vitória"></optgroup>
+            <option value="Vitória">Vitória</option>
+            <option value="Serra">Serra</option>
+            <option value="Vila Velha">Vila Velha</option>
+            <option value="Cariacica">Cariacica</option>
+        <optgroup label="Região Serrana">Região Serrana</optgroup>
+        <option value="DM">Domingos Martins</option>
+        <option value="VH">Vitor Hugo</option>
+        <option value="SMJ">Santa Maria de Jetibá</option>        
+    </select>
+    <br>
+    <span>Comentário</span>
+    <textarea name="comentario" id="comentario" cols="50" rows="10"></textarea>
+    <br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+</div>
+</section>
+
+
+</body>
+</html>
