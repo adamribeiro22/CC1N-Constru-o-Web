@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 19</title>
+</head>
+<body>
+    <script>
+        document.writeln('olá mundo')
+    </script>
+    <h1>javascript</h1>
+    <script>
+        document.writeln('olá novamente')
+        window.alert('Escreva o certo')
+    </script>
+    <div id="resposta">
+
+    </div>
+    <script>
+        document.getElementById('resposta').innerHTML = 'olá mundo pelo getelement'
+        var asd =  window.prompt('digite o CERTO')
+        var dsa = document.innerHTML ='<strong>' + asd + '</strong>'
+        document.writeln(dsa)
+    </script>
+    <div>
+        <input id="nomeusuario" type="text" size="60">
+        <input id="senhausuario" type="password" size="60"><br>
+        <button id="validade" onclick="validarusuario()">enviar</button>
+    </div>
+    <script>
+        function validarusuario(){
+             var nomeusuario = ''
+             var senhausuario = ''
+            nomeusuario = document.getElementById('nomeusuario').value;
+            senhausuario = document.getElementById('senhausuario').value;
+            if(nomeusuario == 'administrador' && senhausuario == '1234'){
+                window.location.href = 'page1.html';
+            }
+            else{
+                window.alert("tem parada errada aí")
+            }
+
+        
+        }
+    </script>
+
+
+</body>
+</html>

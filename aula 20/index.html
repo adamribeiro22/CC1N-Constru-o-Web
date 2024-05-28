@@ -1,0 +1,37 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula 19</title>
+</head>
+<body>
+    
+</body>
+<main>
+    <section id = "contato">
+        <h1>Contato</h1>
+        <div>
+            <span>Login:</span>
+            <input id="usuario" type="email">
+            <span>Senha:</span>
+            <input id="senha" type="password">
+            <button onclick="validar()">Enviar</button>
+            <Button>cancelar</Button>
+        </div>
+    </section>
+</main>
+<script>
+    const adm = "administrador"
+    const psw = "adm@123"
+
+    function validar() {
+        let usuario = document.getElementById("usuario").value
+        let senha = document.getElementById("senha").value
+        if (usuario == adm && senha == psw) {
+            window.alert("Usuario logado com sucesso")
+        } else {
+            window.alert("Usuario inválido")
+        }
+    }
+</script>
+</html>
