@@ -5,25 +5,63 @@
     <title>aula 21</title>
 </head>
 <body>
-   <span>Data de nascimento</span>
-   <input type="number" min="1" max="31">
+   <div><span>Data de nascimento: </span>
+   <input class="dia" id="dia" type="number" min="1" max="31">
      
-   <select name="mês" id="">
-        <option value="Janeiro">Janeiro</option>
-        <option value="Fevereiro">Fevereiro</option>
-        <option value="Março">Março</option>
-        <option value="Abril">Abril</option>
-        <option value="Maio">Maio</option>
-        <option value="Junho">Junho</option>
-        <option value="Julho">Julho</option>
-        <option value="Agosto">Agosto</option>
-        <option value="Setembro">Setembro</option>
-        <option value="Outubro">Outubro</option>
-        <option value="Novembro">Novembro</option>
-        <option value="Dezembro">Dezembro</option>
+   <select class="mes" name="mes" id="mes">
+        <option value="01">Janeiro</option>
+        <option value="02">Fevereiro</option>
+        <option value="03">Março</option>
+        <option value="04">Abril</option>
+        <option value="05">Maio</option>
+        <option value="06">Junho</option>
+        <option value="07">Julho</option>
+        <option value="08">Agosto</option>
+        <option value="09">Setembro</option>
+        <option value="10">Outubro</option>
+        <option value="11">Novembro</option>
+        <option value="12">Dezembro</option>
     </select>
 
-    <input type="number" min="1">
+    <input class="ano" id="ano" type="number" min="1900">
+    <button onclick=""></button>
+</div>
+
+<div>
+    <button class="botao" onclick="calcularidade()" id="resultado"></button>
+</div>
+
+<script>
+    function calcularidade(){
+        var hoje = new Date()
+
+        let result = document.getElementById("resultado").value
+
+        dia = document.getElementById("dia").value
+        mes = document.getElementById("mes").value
+        ano = document.getElementById("ano").value 
+
+        if (dia <= 0 | | ano <=0) {
+            alert("digite uma data válida")
+        }
+         
+        nascimento = new Date(ano+"/" + mes + "/" ano + "/")
+
+        var idade = hoje.getFullYear() - nascimento.getFullYear()
+
+        let dth = new Date(hoje.getFullYear(), hoje.getMonth(), hoje.getDate())
+        let dht2 = new Date(hoje.getFullYear(), nascimento.getMonth(), nascimento.getDate())
+
+        if (dth < dth2) {
+            idade--;
+        }
+
+        result.innerHTML = "<b>" + ` Você tem ${idade} ` 
+
+        }
+
+    
+</script>
 
 </body>
 </html>
